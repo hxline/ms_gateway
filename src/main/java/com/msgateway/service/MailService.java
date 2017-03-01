@@ -4,18 +4,18 @@ import com.msgateway.domain.User;
 
 import io.github.jhipster.config.JHipsterProperties;
 
-import org.apache.commons.lang3.CharEncoding;
+//import org.apache.commons.lang3.CharEncoding;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.MessageSource;
-import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.MimeMessageHelper;
+//import org.springframework.mail.javamail.JavaMailSender;
+//import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.context.Context;
 import org.thymeleaf.spring4.SpringTemplateEngine;
 
-import javax.mail.internet.MimeMessage;
+//import javax.mail.internet.MimeMessage;
 import java.util.Locale;
 
 /**
@@ -35,17 +35,17 @@ public class MailService {
 
     private final JHipsterProperties jHipsterProperties;
 
-    private final JavaMailSender javaMailSender;
+//    private final JavaMailSender javaMailSender;
 
     private final MessageSource messageSource;
 
     private final SpringTemplateEngine templateEngine;
 
-    public MailService(JHipsterProperties jHipsterProperties, JavaMailSender javaMailSender,
+    public MailService(JHipsterProperties jHipsterProperties, //JavaMailSender javaMailSender,
             MessageSource messageSource, SpringTemplateEngine templateEngine) {
 
         this.jHipsterProperties = jHipsterProperties;
-        this.javaMailSender = javaMailSender;
+//        this.javaMailSender = javaMailSender;
         this.messageSource = messageSource;
         this.templateEngine = templateEngine;
     }
@@ -56,14 +56,14 @@ public class MailService {
             isMultipart, isHtml, to, subject, content);
 
         // Prepare message using a Spring helper
-        MimeMessage mimeMessage = javaMailSender.createMimeMessage();
+//        MimeMessage mimeMessage = javaMailSender.createMimeMessage();
         try {
-            MimeMessageHelper message = new MimeMessageHelper(mimeMessage, isMultipart, CharEncoding.UTF_8);
-            message.setTo(to);
-            message.setFrom(jHipsterProperties.getMail().getFrom());
-            message.setSubject(subject);
-            message.setText(content, isHtml);
-            javaMailSender.send(mimeMessage);
+//            MimeMessageHelper message = new MimeMessageHelper(mimeMessage, isMultipart, CharEncoding.UTF_8);
+//            message.setTo(to);
+//            message.setFrom(jHipsterProperties.getMail().getFrom());
+//            message.setSubject(subject);
+//            message.setText(content, isHtml);
+//            javaMailSender.send(mimeMessage);
             log.debug("Sent e-mail to User '{}'", to);
         } catch (Exception e) {
             log.warn("E-mail could not be sent to user '{}'", to, e);
