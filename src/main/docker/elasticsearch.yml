@@ -1,0 +1,10 @@
+version: '2'
+services:
+    ms_gateway-elasticsearch:
+        container_name: ms_gateway-elasticsearch
+        image: elasticsearch:2.4.1
+        # volumes:
+        #     - ~/volumes/jhipster/ms_gateway/elasticsearch/:/usr/share/elasticsearch/data/
+        ports:
+            - 9200:9200
+            - 9300:9300
