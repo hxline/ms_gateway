@@ -138,12 +138,12 @@
             <artifactId>jackson-datatype-hppc</artifactId>
             <version>${jackson.version}</version>
         </dependency>
-<!--        <dependency>
+        <!--        <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>
             <artifactId>jackson-datatype-json-org</artifactId>
             <version>${jackson.version}</version>
         </dependency>-->
-<!--        <dependency>
+        <!--        <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>
             <artifactId>jackson-datatype-jsr310</artifactId>
         </dependency>-->
@@ -262,7 +262,7 @@
             <artifactId>jjwt</artifactId>
             <version>${jjwt.version}</version>
         </dependency>
-<!--        <dependency>
+        <!--        <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-bean-validators</artifactId>
             <version>${springfox.version}</version>
@@ -292,7 +292,7 @@
             <artifactId>jna</artifactId>
             <version>${jna.version}</version>
         </dependency>
-<!--        <dependency>
+        <!--        <dependency>
             <groupId>net.jpountz.lz4</groupId>
             <artifactId>lz4</artifactId>
             <version>${lz4.version}</version>
@@ -316,7 +316,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
-<!--        <dependency>
+        <!--        <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>${commons-lang.version}</version>
@@ -364,7 +364,7 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
         </dependency>
-<!--        <dependency>
+        <!--        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-actuator</artifactId>
         </dependency>-->
@@ -377,11 +377,11 @@
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
         </dependency>
-<!--        <dependency>
+        <!--        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-loader-tools</artifactId>
         </dependency>-->
-<!--        <dependency>
+        <!--        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>-->
@@ -401,10 +401,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-logging</artifactId>
         </dependency>-->
-<!--        <dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-mail</artifactId>
-        </dependency>-->
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
@@ -474,7 +474,7 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-zuul</artifactId>
         </dependency>
-<!--        <dependency>
+        <!--        <dependency>
             <groupId>org.springframework.retry</groupId>
             <artifactId>spring-retry</artifactId>
         </dependency>-->
@@ -592,7 +592,7 @@
                     </annotationProcessorPaths>
                 </configuration>
             </plugin>
-<!--            <plugin>
+            <!--            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-eclipse-plugin</artifactId>
                 <configuration>
