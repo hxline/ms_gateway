@@ -55,7 +55,7 @@
         <profile.no-liquibase />
         <profile.swagger />
         <!-- Sonar properties -->
-        <project.testresult.directory>${project.build.directory}/test-results</project.testresult.directory>
+        <!--<project.testresult.directory>${project.build.directory}/test-results</project.testresult.directory>-->
         <run.addResources>false</run.addResources>
         <sonar-maven-plugin.version>3.2</sonar-maven-plugin.version>
 
@@ -73,19 +73,19 @@
         <sonar.issue.ignore.multicriteria.UndocumentedApi.resourceKey>src/main/java/**/*</sonar.issue.ignore.multicriteria.UndocumentedApi.resourceKey>
         <sonar.issue.ignore.multicriteria.UndocumentedApi.ruleKey>squid:UndocumentedApi</sonar.issue.ignore.multicriteria.UndocumentedApi.ruleKey>
 
-        <sonar.jacoco.itReportPath>${project.testresult.directory}/coverage/jacoco/jacoco-it.exec</sonar.jacoco.itReportPath>
+<!--        <sonar.jacoco.itReportPath>${project.testresult.directory}/coverage/jacoco/jacoco-it.exec</sonar.jacoco.itReportPath>
         <sonar.jacoco.reportPath>${project.testresult.directory}/coverage/jacoco/jacoco.exec</sonar.jacoco.reportPath>
         <sonar.java.codeCoveragePlugin>jacoco</sonar.java.codeCoveragePlugin>
 
         <sonar.javascript.jstestdriver.reportsPath>${project.testresult.directory}/karma</sonar.javascript.jstestdriver.reportsPath>
-        <!-- For Sonar < 6.2 -->
+         For Sonar < 6.2 
         <sonar.javascript.lcov.reportPath>${project.testresult.directory}/coverage/report-lcov/lcov.info</sonar.javascript.lcov.reportPath>
-        <!-- For Sonar >= 6.2 -->
+         For Sonar >= 6.2 
         <sonar.javascript.lcov.reportPaths>${project.testresult.directory}/coverage/report-lcov/lcov.info</sonar.javascript.lcov.reportPaths>
 
         <sonar.sources>${project.basedir}/src/main/</sonar.sources>
         <sonar.surefire.reportsPath>${project.testresult.directory}/surefire-reports</sonar.surefire.reportsPath>
-        <sonar.tests>${project.basedir}/src/test/</sonar.tests>
+        <sonar.tests>${project.basedir}/src/test/</sonar.tests>-->
 
         <sortpom-maven-plugin.version>2.5.0</sortpom-maven-plugin.version>
         <!-- Spring properties -->
@@ -151,18 +151,18 @@
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
         </dependency>
-        <dependency>
+<!--        <dependency>
             <groupId>com.jayway.awaitility</groupId>
             <artifactId>awaitility</artifactId>
             <version>${awaitility.version}</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
+        </dependency>-->
+<!--        <dependency>
             <groupId>com.jayway.jsonpath</groupId>
             <artifactId>json-path</artifactId>
             <scope>test</scope>
-            <!-- parent POM declares this dependency in default (compile) scope -->
-        </dependency>
+             parent POM declares this dependency in default (compile) scope 
+        </dependency>-->
         <dependency>
             <groupId>com.mattbertolini</groupId>
             <artifactId>liquibase-slf4j</artifactId>
@@ -321,12 +321,12 @@
             <artifactId>commons-lang3</artifactId>
             <version>${commons-lang.version}</version>
         </dependency>
-        <dependency>
+<!--        <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
             <version>${assertj-core.version}</version>
             <scope>test</scope>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.ehcache</groupId>
             <artifactId>ehcache</artifactId>
@@ -409,11 +409,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
-        <dependency>
+<!--        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -428,11 +428,11 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <dependency>
+<!--        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-test</artifactId>
             <scope>test</scope>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter</artifactId>
@@ -483,11 +483,11 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-data</artifactId>
         </dependency>
-        <dependency>
+<!--        <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
-        </dependency>
+        </dependency>-->
     </dependencies>
     <build>
         <defaultGoal>spring-boot:run</defaultGoal>
@@ -672,7 +672,7 @@
                     <runOrder>alphabetical</runOrder>
                 </configuration>
             </plugin>
-            <plugin>
+<!--            <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>${jacoco-maven-plugin.version}</version>
@@ -683,11 +683,11 @@
                             <goal>prepare-agent</goal>
                         </goals>
                         <configuration>
-                            <!-- Sets the path to the file which contains the execution data. -->
+                             Sets the path to the file which contains the execution data. 
                             <destFile>${project.testresult.directory}/coverage/jacoco/jacoco.exec</destFile>
                         </configuration>
                     </execution>
-                    <!-- Ensures that the code coverage report for unit tests is created after unit tests have been run -->
+                     Ensures that the code coverage report for unit tests is created after unit tests have been run 
                     <execution>
                         <id>post-unit-test</id>
                         <phase>test</phase>
@@ -700,7 +700,7 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin>-->
             <plugin>
                 <groupId>org.liquibase</groupId>
                 <artifactId>liquibase-maven-plugin</artifactId>
@@ -862,16 +862,16 @@
                                     <arguments>build --no-notification</arguments>
                                 </configuration>
                             </execution>
-                            <execution>
+<!--                            <execution>
                                 <id>gulp test</id>
                                 <phase>test</phase>
                                 <goals>
                                     <goal>gulp</goal>
                                 </goals>
                                 <configuration>
-                                    <arguments>test --no-notification</arguments>
+                                    <arguments>test - -no-notification</arguments>
                                 </configuration>
-                            </execution>
+                            </execution>-->
                         </executions>
                     </plugin>
                     <plugin>
@@ -947,14 +947,14 @@
                                     <goal>compile</goal>
                                 </goals>
                             </execution>
-                            <execution>
+<!--                            <execution>
                                 <id>test-compile</id>
                                 <phase>test-compile</phase>
                                 <goals>
                                     <goal>add-source</goal>
                                     <goal>testCompile</goal>
                                 </goals>
-                            </execution>
+                            </execution>-->
                         </executions>
                         <configuration>
                             <recompileMode>incremental</recompileMode>
@@ -970,10 +970,10 @@
                                 <id>default-compile</id>
                                 <phase>none</phase>
                             </execution>
-                            <execution>
+<!--                            <execution>
                                 <id>default-testCompile</id>
                                 <phase>none</phase>
-                            </execution>
+                            </execution>-->
                         </executions>
                     </plugin>
                     <plugin>
