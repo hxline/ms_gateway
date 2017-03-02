@@ -6,7 +6,7 @@ spring:
     cloud:
         config:
             fail-fast: true
-            uri: https://admin:${jhipster.registry.password}@hxline-registry.herokuapp.com/config
+            uri: https://admin:admin@hxline-registry.herokuapp.com/config
             # name of the config server's property source (file.yml) that we want to use
             name: ms_gateway
             profile: dev # profile(s) of the property source
