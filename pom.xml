@@ -89,7 +89,7 @@
 
         <sortpom-maven-plugin.version>2.5.0</sortpom-maven-plugin.version>
         <!-- Spring properties -->
-        <spring-cloud.version>Brixton.SR7</spring-cloud.version>
+        <spring-cloud.version>Camden.SR6</spring-cloud.version>
         <springfox.version>2.6.1</springfox.version>
         <yarn.version>v0.19.1</yarn.version>
     </properties>
